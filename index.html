@@ -5,88 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratik Prashant | Portfolio</title>
     <style>
+        /* General Styles */
         :root {
             --primary-color: #2c3e50;
             --accent-color: #3498db;
+            --bg-color: #f4f4f9;
             --text-color: #333;
-            --bg-light: #f4f4f9;
+            --white: #ffffff;
         }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
             margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.6;
         }
-        /* Header */
-        header {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; }
-        
-        /* Navigation */
-        nav {
-            background: #34495e;
-            padding: 0.5rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-        nav a {
-            color: white;
+
+        a {
             text-decoration: none;
-            margin: 0 15px;
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #bdc3c7;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+
+        .contact-info a {
+            color: #ecf0f1;
             font-weight: bold;
         }
-        nav a:hover { color: var(--accent-color); }
 
         /* Sections */
-        section { padding: 3rem 1rem; max-width: 800px; margin: auto; }
-        h2 { border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; color: var(--primary-color); }
-        
-        /* Skills Grid */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-tag {
-            background: var(--bg-light);
-            border: 1px solid #ddd;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
+        section {
+            background: var(--white);
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* Project Cards */
-        .project-card {
-            background: var(--bg-light);
-            border-left: 5px solid var(--accent-color);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
-        .project-tech { font-size: 0.9rem; color: #666; font-style: italic; }
+
+        h3 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .sub-text {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Grid for Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 30px;
+        }
+        
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 2rem;
-            background: var(--primary-color);
-            color: white;
-            margin-top: 2rem;
-        }
-        .contact-btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -94,80 +140,115 @@
 
     <header>
         <h1>Pratik Prashant</h1>
-        <p>Computer Science Undergraduate & Aspiring Data Analyst</p>
-        <p>Bhubaneswar, Odisha | pratik.p.128034@gmail.com</p>
+        <p>Aspiring Data Analyst & Computer Science Undergraduate</p>
+        <div class="contact-info">
+            <span>📍 Bhubaneswar, Odisha</span>
+            <span>📧 <a href="mailto:pratik.p.128034@gmail.com">pratik.p.128034@gmail.com</a></span>
+            <span>📱 +91 9798983784</span>
+            <br><br>
+            <span><a href="#">LinkedIn</a></span> | 
+            <span><a href="#">GitHub</a></span>
+        </div>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="container">
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a motivated Computer Science undergraduate (Class of 2026) at Kalinga Institute of Industrial Technology[cite: 17]. 
-            I have a strong foundation in Java, Python, and Data Structures[cite: 5]. My passion lies in Data Analytics—applying 
-            programming to extract insights that support informed decision-making. I am a detail-oriented quick learner 
-            eager to contribute to impactful tech projects[cite: 6, 7].
-        </p>
-    </section>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Motivated Computer Science undergraduate (Class of 2026) at Kalinga Institute of Industrial Technology with strong skills in Java, Python, and Data Structures. Passionate about data analytics and applying programming to extract insights and support informed decisions. Detail-oriented, quick learner, and eager to contribute to impactful tech projects.
+            </p>
+        </section>
 
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <span class="skill-tag">Java (Intermediate) [cite: 25]</span>
-            <span class="skill-tag">Python [cite: 25]</span>
-            <span class="skill-tag">MySQL [cite: 26]</span>
-            <span class="skill-tag">Data Structures & Algorithms [cite: 27]</span>
-            <span class="skill-tag">Excel & Power BI [cite: 27]</span>
-            <span class="skill-tag">Pandas & NumPy [cite: 28]</span>
-        </div>
-    </section>
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Languages</strong>
+                    Java (Intermediate), Python (Beginner), C (Beginner)
+                </div>
+                <div class="skill-category">
+                    <strong>Data & Analytics</strong>
+                    MySQL, Microsoft Excel, Power BI
+                </div>
+                <div class="skill-category">
+                    <strong>Libraries</strong>
+                    NumPy, Pandas, Matplotlib, Seaborn
+                </div>
+                <div class="skill-category">
+                    <strong>Tools</strong>
+                    VS Code, PyCharm
+                </div>
+                <div class="skill-category">
+                    <strong>Core Concepts</strong>
+                    Data Structures & Algorithms, OOP
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        
-        <div class="project-card">
-            <h3>Pizza Sales Analysis</h3>
-            <p class="project-tech">Tech Stack: Excel, SQL, Python, Power BI [cite: 20]</p>
-            <p>Performed exploratory data analysis (EDA) on a pizza sales dataset. Created interactive dashboards 
-            to track sales, top-selling items, and daily/monthly performance trends[cite: 21].</p>
-        </div>
+        <section>
+            <h2>Featured Projects</h2>
+            
+            <div class="project-item">
+                <h3>Pizza Sales Analysis - Data Analytics Project</h3>
+                <span class="sub-text">Tech Stack: Excel, SQL, Python</span>
+                <ul>
+                    <li>Performed exploratory data analysis (EDA) on pizza sales dataset.</li>
+                    <li>Created dashboards and reports to track sales, top-selling items, and daily/monthly performance.</li>
+                </ul>
+            </div>
 
-        <div class="project-card">
-            <h3>Password Manager Application</h3>
-            <p class="project-tech">Tech Stack: Python, Tkinter [cite: 21]</p>
-            <p>Developed a desktop application for secure credential storage. Implemented automated 
-            algorithms to generate strong, complex passwords to enhance security[cite: 22, 23].</p>
-        </div>
-    </section>
+            <div class="project-item">
+                <h3>Password Manager Application</h3>
+                <span class="sub-text">Tech Stack: Python, Tkinter</span>
+                <ul>
+                    <li>Developed a Tkinter-based password manager with secure credential storage.</li>
+                    <li>Implemented automated strong password generation to enhance security.</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="experience">
-        <h2>Experience & Education</h2>
-        <ul>
-            <li>
-                <strong>AI-ML Virtual Internship</strong> - AICTE & EduSkills (Jan 2025 - Mar 2025) [cite: 9, 10]<br>
-                Completed a national program supported by Google for Developers.
-            </li>
-            <li>
-                <strong>B.Tech in CSE</strong> - Kalinga Institute Of Industrial Technology (2022 - 2026) [cite: 17]
-            </li>
-            <li>
-                <strong>Internship Offer</strong> - National Remote Sensing Centre (NRSC) [cite: 34]
-            </li>
-        </ul>
-    </section>
+        <section>
+            <h2>Experience & Internships</h2>
+            
+            <div class="project-item">
+                <h3>AI-ML Virtual Internship</h3>
+                <span class="sub-text">AICTE & EduSkills | Jan 2025 – Mar 2025</span>
+                <p>Completed a 10-week Al-ML virtual internship supported by Google for Developers.</p>
+            </div>
 
-    <section id="contact">
-        <h2>Get in Touch</h2>
-        <p>I am currently open to internship opportunities in Data Analytics and Software Development.</p>
-        <p><strong>Phone:</strong> +91 9798983784 [cite: 2]</p>
-        <a href="mailto:pratik.p.128034@gmail.com" class="contact-btn">Email Me</a>
-    </section>
+            <div class="project-item">
+                <h3>Data Science Analytics</h3>
+                <span class="sub-text">HP LIFE Foundation</span>
+                <p>Learned leading data science practices, methodologies, and tools for data-driven business decisions.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>EHE Certification</h3>
+                <span class="sub-text">EC-Council</span>
+                <p>Developed foundational understanding of cybersecurity principles and security hardening.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="project-item">
+                <h3>B.Tech in Computer Science and Engineering</h3>
+                <span class="sub-text">Kalinga Institute Of Industrial Technology | Sep 2022 – Jul 2026</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements & Leadership</h2>
+            <ul>
+                <li><strong>Internship Offer:</strong> Received offer from NRSC (National Remote Sensing Centre).</li>
+                <li><strong>Winner:</strong> Secured 1st place in Technical Quiz Competition / Abhivyakti 2024.</li>
+                <li><strong>Central Organiser:</strong> KIIT Fest - Led coordination for university-level cultural festival.</li>
+                <li><strong>Hostel Committee Member:</strong> Supported hostel management and grievance handling.</li>
+            </ul>
+        </section>
+
+    </div>
 
     <footer>
         <p>&copy; 2026 Pratik Prashant. Built with HTML & CSS.</p>
