@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Prashant | Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-light: #f4f4f9;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-color);
+        }
+        /* Header */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        /* Navigation */
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Sections */
+        section { padding: 3rem 1rem; max-width: 800px; margin: auto; }
+        h2 { border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; color: var(--primary-color); }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: var(--bg-light);
+            border: 1px solid #ddd;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: var(--bg-light);
+            border-left: 5px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project-tech { font-size: 0.9rem; color: #666; font-style: italic; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 2rem;
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pratik Prashant</h1>
+        <p>Computer Science Undergraduate & Aspiring Data Analyst</p>
+        <p>Bhubaneswar, Odisha | pratik.p.128034@gmail.com</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a motivated Computer Science undergraduate (Class of 2026) at Kalinga Institute of Industrial Technology[cite: 17]. 
+            I have a strong foundation in Java, Python, and Data Structures[cite: 5]. My passion lies in Data Analytics—applying 
+            programming to extract insights that support informed decision-making. I am a detail-oriented quick learner 
+            eager to contribute to impactful tech projects[cite: 6, 7].
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <span class="skill-tag">Java (Intermediate) [cite: 25]</span>
+            <span class="skill-tag">Python [cite: 25]</span>
+            <span class="skill-tag">MySQL [cite: 26]</span>
+            <span class="skill-tag">Data Structures & Algorithms [cite: 27]</span>
+            <span class="skill-tag">Excel & Power BI [cite: 27]</span>
+            <span class="skill-tag">Pandas & NumPy [cite: 28]</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        
+        <div class="project-card">
+            <h3>Pizza Sales Analysis</h3>
+            <p class="project-tech">Tech Stack: Excel, SQL, Python, Power BI [cite: 20]</p>
+            <p>Performed exploratory data analysis (EDA) on a pizza sales dataset. Created interactive dashboards 
+            to track sales, top-selling items, and daily/monthly performance trends[cite: 21].</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Password Manager Application</h3>
+            <p class="project-tech">Tech Stack: Python, Tkinter [cite: 21]</p>
+            <p>Developed a desktop application for secure credential storage. Implemented automated 
+            algorithms to generate strong, complex passwords to enhance security[cite: 22, 23].</p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience & Education</h2>
+        <ul>
+            <li>
+                <strong>AI-ML Virtual Internship</strong> - AICTE & EduSkills (Jan 2025 - Mar 2025) [cite: 9, 10]<br>
+                Completed a national program supported by Google for Developers.
+            </li>
+            <li>
+                <strong>B.Tech in CSE</strong> - Kalinga Institute Of Industrial Technology (2022 - 2026) [cite: 17]
+            </li>
+            <li>
+                <strong>Internship Offer</strong> - National Remote Sensing Centre (NRSC) [cite: 34]
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>I am currently open to internship opportunities in Data Analytics and Software Development.</p>
+        <p><strong>Phone:</strong> +91 9798983784 [cite: 2]</p>
+        <a href="mailto:pratik.p.128034@gmail.com" class="contact-btn">Email Me</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pratik Prashant. Built with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
